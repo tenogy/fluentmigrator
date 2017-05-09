@@ -16,8 +16,12 @@
 //
 #endregion
 
+using System;
 using System.IO;
 using System.Reflection;
+#if COREFX
+using System.Runtime.Loader;
+#endif
 
 namespace FluentMigrator.Runner.Initialization.AssemblyLoader
 {
@@ -37,7 +41,11 @@ namespace FluentMigrator.Runner.Initialization.AssemblyLoader
             {
                 fileName = Path.GetFullPath(this.name);
             }
+#if COREFX
+            Assembly assembly = AssemblyLoadContext.Default.LoadFromAssemblyPath(fileName);
+#else
             Assembly assembly = Assembly.LoadFrom(fileName);
+#endif
             return assembly;
         }
     }
