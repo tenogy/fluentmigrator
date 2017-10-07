@@ -35,3 +35,4 @@ src/FluentMigrator.T4.Tests/IntialMigrationCode.cs
 /TestResults
 .vs/
 project.lock.json
+/nuget/Tenogy.FluentMigrator.1.0.0.nupkg
