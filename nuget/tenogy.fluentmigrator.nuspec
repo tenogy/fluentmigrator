@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Tenogy.FluentMigrator</id>
-		<version>1.0.0</version>
+		<version>1.0.1</version>
 	  <authors>Josh Coffman, Tom Marien</authors>
 	  <owners>Sean Chambers</owners>
 	  <licenseUrl>https://github.com/schambers/fluentmigrator/blob/master/LICENSE.txt</licenseUrl>

@@ -166,7 +166,7 @@ namespace FluentMigrator.Runner.Initialization
             if (processorFactory == null)
                 throw new ProcessorFactoryNotFoundException(string.Format("The provider or dbtype parameter is incorrect. Available choices are {0}: ", ProcessorFactoryProvider.ListAvailableProcessorTypes()));
 
-            var processor = processorFactory.Create(connectionString, RunnerContext.Announcer, new ProcessorOptions
+            var processor = processorFactory.Create(RunnerContext.Connection, RunnerContext.Announcer, new ProcessorOptions
             {
                 PreviewOnly = RunnerContext.PreviewOnly,
                 Timeout = RunnerContext.Timeout,
